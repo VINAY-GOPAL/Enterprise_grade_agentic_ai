@@ -1,0 +1,28 @@
+[project]
+name = "emergingtechnologyresearch"
+version = "0.1.0"
+description = "emergingtechnologyresearch using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[bedrock,tools]==1.9.3",
+    "langfuse>=3.14.4",
+    "litellm>=1.75.3",
+    "openinference-instrumentation-crewai>=0.1.19",
+    "openinference-instrumentation-litellm>=0.1.29",
+]
+
+[project.scripts]
+emergingtechnologyresearch = "emergingtechnologyresearch.main:run"
+run_crew = "emergingtechnologyresearch.main:run"
+train = "emergingtechnologyresearch.main:train"
+replay = "emergingtechnologyresearch.main:replay"
+test = "emergingtechnologyresearch.main:test"
+run_with_trigger = "emergingtechnologyresearch.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
