@@ -30,7 +30,7 @@ agents:
     bedrock_agentcore:
       agent_id: emergingtechnologyresearch-YmrcKp6jwq
       agent_arn: arn:aws:bedrock-agentcore:us-east-1:038777381576:runtime/emergingtechnologyresearch-YmrcKp6jwq
-      agent_session_id: a560822d-fb87-4d23-a700-54a0a1fa15cb
+      agent_session_id: e17cc2af-b0d7-4ac0-b521-5e02c845fffd
     codebuild:
       project_name: bedrock-agentcore-emergingtechnologyresearch-builder
       execution_role: arn:aws:iam::038777381576:role/AmazonBedrockAgentCoreSDKCodeBuild-us-east-1-a90556d9aa

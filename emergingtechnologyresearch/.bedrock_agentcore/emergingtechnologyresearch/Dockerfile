@@ -7,7 +7,10 @@ ENV UV_SYSTEM_PYTHON=1 \
     PYTHONUNBUFFERED=1 \
     DOCKER_CONTAINER=1 \
     AWS_REGION=us-east-1 \
-    AWS_DEFAULT_REGION=us-east-1
+    AWS_DEFAULT_REGION=us-east-1 \
+    LANGFUSE_SECRET_KEY="sk-lf-97583ab0-8604-4070-ac87-109bc583ce07" \
+    LANGFUSE_PUBLIC_KEY="pk-lf-a730404e-84b0-4df8-8a9e-0883a144f2c9" \
+    LANGFUSE_BASE_URL=https://cloud.langfuse.com
 
 RUN uv pip install \
     crewai \

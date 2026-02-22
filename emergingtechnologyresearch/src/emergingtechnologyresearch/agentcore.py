@@ -1,3 +1,9 @@
+import boto3
+import logging
+logging.basicConfig(level=logging.DEBUG)
+client = boto3.client('bedrock-runtime', region_name='us-east-1')
+print("Boto3 client created successfully")
+
 from bedrock_agentcore import BedrockAgentCoreApp
 from datetime import datetime
 # from . crews.researchCrew import Emergingtechnologyresearch
