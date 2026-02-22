@@ -1,8 +1,23 @@
-import boto3
 import logging
-logging.basicConfig(level=logging.DEBUG)
-client = boto3.client('bedrock-runtime', region_name='us-east-1')
-print("Boto3 client created successfully")
+import sys
+logging.basicConfig(
+    level=logging.DEBUG,
+    stream=sys.stdout,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+try:
+    from bedrock_agentcore import BedrockAgentCoreApp
+    logger.info("BedrockAgentCoreApp imported successfully")
+    from datetime import datetime
+    import json
+    logger.info("Standard imports successful")
+    from crew import Emergingtechnologyresearch
+    logger.info("Crew imported successfully")
+except Exception as e:
+    logger.error(f"Import failed: {e}", exc_info=True)
+    sys.exit(1)
 
 from bedrock_agentcore import BedrockAgentCoreApp
 from datetime import datetime

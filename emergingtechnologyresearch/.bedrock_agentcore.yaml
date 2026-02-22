@@ -5,7 +5,7 @@ agents:
     entrypoint: D:/Data science projects/llm_projects/Enterprise_grade_agentic_ai/emergingtechnologyresearch/src/emergingtechnologyresearch/agentcore.py
     deployment_type: container
     runtime_type: null
-    platform: linux/amd64
+    platform: linux/arm64
     container_runtime: none
     source_path: D:\Data science projects\llm_projects\Enterprise_grade_agentic_ai\emergingtechnologyresearch\src\emergingtechnologyresearch
     aws:
@@ -30,7 +30,7 @@ agents:
     bedrock_agentcore:
       agent_id: emergingtechnologyresearch-YmrcKp6jwq
       agent_arn: arn:aws:bedrock-agentcore:us-east-1:038777381576:runtime/emergingtechnologyresearch-YmrcKp6jwq
-      agent_session_id: e17cc2af-b0d7-4ac0-b521-5e02c845fffd
+      agent_session_id: 653902e0-7bf2-4e19-9fc8-febd65697e7b
     codebuild:
       project_name: bedrock-agentcore-emergingtechnologyresearch-builder
       execution_role: arn:aws:iam::038777381576:role/AmazonBedrockAgentCoreSDKCodeBuild-us-east-1-a90556d9aa
