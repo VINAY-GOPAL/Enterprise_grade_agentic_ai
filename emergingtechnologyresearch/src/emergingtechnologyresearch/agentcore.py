@@ -3,7 +3,7 @@ from datetime import datetime
 # from . crews.researchCrew import Emergingtechnologyresearch
 # from . utils.env import populateEnvWithSecrets
 import json
-from .crew import Emergingtechnologyresearch
+from crew import Emergingtechnologyresearch
 
 # Create AgentCore App
 app = BedrockAgentCoreApp()

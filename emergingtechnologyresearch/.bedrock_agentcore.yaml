@@ -4,7 +4,6 @@ agents:
     name: emergingtechnologyresearch
     entrypoint: D:/Data science projects/llm_projects/Enterprise_grade_agentic_ai/emergingtechnologyresearch/src/emergingtechnologyresearch/agentcore.py
     deployment_type: container
-    requirements: D:/Data science projects/llm_projects/Enterprise_grade_agentic_ai/emergingtechnologyresearch/.bedrock_agentcore/emergingtechnologyresearch/requirements.txt
     runtime_type: null
     platform: linux/amd64
     container_runtime: none
@@ -29,13 +28,13 @@ agents:
         idle_runtime_session_timeout: null
         max_lifetime: null
     bedrock_agentcore:
-      agent_id: null
-      agent_arn: null
-      agent_session_id: null
+      agent_id: emergingtechnologyresearch-YmrcKp6jwq
+      agent_arn: arn:aws:bedrock-agentcore:us-east-1:038777381576:runtime/emergingtechnologyresearch-YmrcKp6jwq
+      agent_session_id: a560822d-fb87-4d23-a700-54a0a1fa15cb
     codebuild:
-      project_name: null
-      execution_role: null
-      source_bucket: null
+      project_name: bedrock-agentcore-emergingtechnologyresearch-builder
+      execution_role: arn:aws:iam::038777381576:role/AmazonBedrockAgentCoreSDKCodeBuild-us-east-1-a90556d9aa
+      source_bucket: bedrock-agentcore-codebuild-sources-038777381576-us-east-1
     memory:
       mode: STM_ONLY
       memory_id: emergingtechnologyresearch_mem-yXxVpm9hjX
