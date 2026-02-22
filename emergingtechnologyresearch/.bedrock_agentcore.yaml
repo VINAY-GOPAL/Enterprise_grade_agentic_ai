@@ -4,6 +4,7 @@ agents:
     name: emergingtechnologyresearch
     entrypoint: D:/Data science projects/llm_projects/Enterprise_grade_agentic_ai/emergingtechnologyresearch/src/emergingtechnologyresearch/agentcore.py
     deployment_type: container
+    requirements: D:/Data science projects/llm_projects/Enterprise_grade_agentic_ai/emergingtechnologyresearch/.bedrock_agentcore/emergingtechnologyresearch/requirements.txt
     runtime_type: null
     platform: linux/amd64
     container_runtime: none
