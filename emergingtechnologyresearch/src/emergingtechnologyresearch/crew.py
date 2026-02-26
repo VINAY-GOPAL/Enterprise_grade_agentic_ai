@@ -3,6 +3,7 @@ from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
 from typing import List
 from pydantic import BaseModel, Field
+from crewai_tools.aws.bedrock.knowledge_base.retriever_tool import BedrockKBRetrieverTool
 
 class Section(BaseModel):
    topic: str = Field(description="Title of the section")
@@ -12,6 +13,13 @@ class Section(BaseModel):
 
 class ResearchReport(BaseModel):
     sections:list[Section] = Field(description="List of sections together forming a report")
+
+
+
+kb_tool = BedrockKBRetrieverTool(
+    knowledge_base_id="JXTLJPJWH3",
+    number_of_results=5
+)
 
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
@@ -30,18 +38,26 @@ class Emergingtechnologyresearch():
     
     # If you would like to add tools to your agents, you can learn more about it here:
     # https://docs.crewai.com/concepts/agents#agent-tools
+
+
+
     @agent
     def researcher(self) -> Agent:
         return Agent(
             config=self.agents_config['researcher'], # type: ignore[index]
-            verbose=True
+            verbose=True,
+            tools=[kb_tool]
         )
+
+
+
 
     @agent
     def reporting_analyst(self) -> Agent:
         return Agent(
             config=self.agents_config['reporting_analyst'], # type: ignore[index]
-            verbose=True
+            verbose=True,
+            tools=[kb_tool]
         )
 
     # To learn more about structured task outputs,

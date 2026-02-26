@@ -32,7 +32,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
+        'topic': 'Quantum Computing in cybersecurity',
         'current_year': str(datetime.now().year)
     }
 
